@@ -30,7 +30,8 @@ public class Scenario {
         webBrowser.getChromeDriver().findElement(By.id("username")).clear();
         webBrowser.getChromeDriver().findElement(By.id("username")).sendKeys("admin");
         webBrowser.getChromeDriver().findElement(By.id("password")).clear();
-        webBrowser.getChromeDriver().findElement(By.id("password")).sendKeys("Jf01Kd83");
+        String wachtwoord = System.getenv("ROUTERWACHTWOORD");
+        webBrowser.getChromeDriver().findElement(By.id("password")).sendKeys(wachtwoord);
         webBrowser.getChromeDriver().findElement(By.id("pop_login")).click();
         wacht(2000);
 
